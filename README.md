@@ -28,3 +28,17 @@ git push
 ```
 
 Go to http://localhost:8000
+
+## Api Sanctum
+```
+protected $middlewareGroups = [
+    'web' => [
+        ...
+    ],
+
+    'api' => [
+        \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class, --> uncomment this line
+        ...
+    ],
+];
+```
