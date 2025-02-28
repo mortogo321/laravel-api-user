@@ -16,15 +16,7 @@ php artisan serve
 
 Open new terminal
 ```bash
-yarn watch
-```
-
-## Commit your code
-```bash
-yarn build
-git add .
-git commit -m 'commit message'
-git push
+yarn dev
 ```
 
 Go to http://localhost:8000
