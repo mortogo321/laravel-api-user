@@ -30,18 +30,14 @@ git push
 Go to http://localhost:8000
 
 ## Api Sanctum
-file: `app/Http/Kernel.php`
+file: `config/cors.php`
 ```
-# Uncomment following line
+return [
+    ...
+    
+    # set `supports_credentials` to `true`
+    'supports_credentials' => true,
 
-protected $middlewareGroups = [
-    'web' => [
-        ...
-    ],
-
-    'api' => [
-        \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
-        ...
-    ],
+    ...
 ];
 ```
